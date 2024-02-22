@@ -20,6 +20,19 @@ public class Database {
         }
 
     }
+    public static Connection adminConnect(){
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //PORT and DbName should be changed
+
+            con = DriverManager.getConnection("jdbc:mysql://localhost:13306/gritacademyportal","admin1","");
+            return con;
+        }catch (Exception e){
+            System.out.println(e);
+            return null;
+        }
+
+    }
 
     public static void PrintSQLException(SQLException sqle) {
         PrintSQLException(sqle, false);

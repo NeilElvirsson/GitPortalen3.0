@@ -15,5 +15,6 @@
      <%@ include file="Fragments/coursesTable.jsp" %>
 
     </div>
+    <%@ include file="Fragments/footer.jsp" %>
 </body>
 </html>

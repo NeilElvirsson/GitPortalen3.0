@@ -3,5 +3,7 @@
             <nav>
                 <a href="http://localhost:23310/login">Login</a>
                 <a href="http://localhost:23310/register">Register</a>
+                <a href="http://localhost:23310/userpage">User page</a>
+                <a href="http://localhost:23310/courses">Courses</a>
             </nav>
         </div>

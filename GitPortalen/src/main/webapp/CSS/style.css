@@ -115,3 +115,11 @@ body{
     cursor: pointer;
     transition: 0.3s;
   }
+  .foot {
+  display: flex;
+   align-self: flex-end;
+  background-color: black;
+  color: gold;
+  text-align: center;
+  padding: 10px;
+  }
