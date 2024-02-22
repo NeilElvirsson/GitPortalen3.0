@@ -116,11 +116,9 @@ public class StudentsModule {
             }
 
             con.close();
-        } catch (Exception e) {
-            System.out.println(e);
-            e.printStackTrace();
-            throw new RuntimeException("Error inserting student: " + e.getMessage(), e);
-
+        } catch (SQLException e) {
+           Database.PrintSQLException(e);
+            return null;
         }
         return insertSuccessfull;
     }
