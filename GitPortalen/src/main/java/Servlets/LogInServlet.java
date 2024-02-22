@@ -19,13 +19,15 @@ import java.sql.SQLException;
 
 @WebServlet(name = "login", urlPatterns = "/login")
 public class LogInServlet extends HttpServlet {
-
+/*
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         cleanBean();
     }
 
+
+ */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("login.jsp").forward(req, resp);

@@ -2,7 +2,7 @@
 <div class="nav-cont">
             <nav>
                 <a href="http://localhost:23310/login">Login</a>
-                <a href="http://localhost:23310/userpage">user page</a>
-                <a href="http://localhost:23310/courses">user page</a>
+                <a href="http://localhost:23310/userpage">User page</a>
+                <a href="http://localhost:23310/courses">Courses</a>
             </nav>
         </div>

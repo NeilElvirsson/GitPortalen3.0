@@ -94,7 +94,7 @@ public class StudentsModule {
 
 
 
-            Connection con = Database.connect();
+            Connection con = Database.adminConnect();
             try (PreparedStatement pstmt = con.prepareStatement(query)) {
                 pstmt.setString(1, fname);
                 pstmt.setString(2, lname);
