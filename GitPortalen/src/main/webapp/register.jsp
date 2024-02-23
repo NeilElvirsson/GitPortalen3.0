@@ -23,11 +23,13 @@
 </head>
 <body>
     <div class="container">
-        <div class="nav-cont">
-            <nav>
-                <a href="http://localhost:23310/register">Register</a>
-            </nav>
-        </div>
+            <c:if test="${applicationScope.userBean.privilegeType == ('user')}">
+                    <%@ include file="Fragments/nav.jsp" %>
+                </c:if>
+
+                <c:if test="${applicationScope.userBean.privilegeType == 'admin'}">
+                    <%@ include file="Fragments/adminNav.jsp" %>
+                </c:if>
         <div class="text">
             <h1>Register</h1>
         </div>
