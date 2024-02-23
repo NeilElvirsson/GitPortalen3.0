@@ -40,7 +40,6 @@ public class LogInServlet extends HttpServlet {
         String table = req.getParameter("teach_stud");
         String username = req.getParameter("username");
         String password = req.getParameter("password");
-        System.out.println(table);
         //Querie for information on student/teacher
         //if the user is a student then send username to student module, student module returns a resultset with
         if (req.getParameter("login")!=null) {
