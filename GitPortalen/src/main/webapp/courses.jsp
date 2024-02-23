@@ -8,7 +8,13 @@
 
     <div class="container">
 
-     <%@ include file="Fragments/nav.jsp" %>
+     <c:if test="${applicationScope.userBean.privilegeType == ('user')}">
+                         <%@ include file="Fragments/nav.jsp" %>
+                     </c:if>
+
+                     <c:if test="${applicationScope.userBean.privilegeType == 'admin'}">
+                         <%@ include file="Fragments/adminNav.jsp" %>
+                     </c:if>
       <div class="text">
                          <h1>Courses</h1>
       </div>
