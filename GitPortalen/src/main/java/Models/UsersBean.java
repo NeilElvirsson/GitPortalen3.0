@@ -1,5 +1,6 @@
 package Models;
 
+import Models.Helpers.StudentConsturctor;
 import Models.Helpers.UserCourseConstructor;
 
 import java.io.Serializable;
@@ -34,9 +35,12 @@ public class UsersBean implements Serializable {
     public void setConfirmed(boolean confirmed) {
         this.confirmed = confirmed;
     }
-
-
-
+    public ArrayList<StudentConsturctor> getAllStudents() {
+        return allStudents;
+    }
+    public void setAllStudents(ArrayList<StudentConsturctor> allStudents) {
+        this.allStudents = allStudents;
+    }
     public ArrayList<String> getAllCoursesId() {
         return allCoursesId;
     }
@@ -62,6 +66,8 @@ public class UsersBean implements Serializable {
     }
 
     private ArrayList<UserCourseConstructor> userCourses;
+
+    private ArrayList<StudentConsturctor> allStudents;
     private ArrayList<String> allCoursesId;
     private ArrayList<String> allStudentsId;
 

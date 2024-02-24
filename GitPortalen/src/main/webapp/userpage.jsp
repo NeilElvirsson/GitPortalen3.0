@@ -20,6 +20,15 @@
 <c:if test="${requestScope['fellowStudentsBTClick']}">
     <%@ include file="Fragments/fellowStudentsTable.jsp" %>
 </c:if>
+
+    <c:if test="${requestScope['showAllCourses']}">
+        <%@ include file="Fragments/coursesTable.jsp" %>
+    </c:if>
+
+    <c:if test="${requestScope['showAllStudents']}">
+        <%@ include file="Fragments/allStudents.jsp" %>
+    </c:if>
+
 <c:if test="${applicationScope.userBean.userType == 'teacher'}">
     <%@ include file="Fragments/teacherForm.jsp" %>
 </c:if>

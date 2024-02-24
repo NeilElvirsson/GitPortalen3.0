@@ -2,12 +2,14 @@
 <div class="table-cont">
     <table>
         <tr>
+            <th>Id</th>
             <th>Course</th>
             <th>YHP</th>
             <th>Description</th>
         </tr>
         <c:forEach items="${applicationScope.userBean.allCourses}" var="course">
             <tr>
+                <td>${course.getId()}</td>
                 <td>${course.getCourseName()}</td>
                 <td>${course.getYHP()}</td>
                 <td>${course.getDescription()}</td>

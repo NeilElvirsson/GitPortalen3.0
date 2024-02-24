@@ -1,5 +1,7 @@
 package Servlets;
 
+import Models.Helpers.DisplayCoursesPackage;
+import Models.Helpers.DisplayStudentsPacker;
 import Models.Helpers.UserCoursePackage;
 import Models.Helpers.UserStudentsPackage;
 import Models.UsersBean;
@@ -28,6 +30,8 @@ public class UserPageServlet extends HttpServlet {
         String showMyCourses = req.getParameter("showcourses");
         String showFellowStudents = req.getParameter("showstudents");
         String showStudentCourses = req.getParameter("showStudentCourses");
+        String showAllCourses = req.getParameter("allcourses");
+        String showAllStudents = req.getParameter("allstudents");
         UsersBean userBean = ((UsersBean) getServletConfig().getServletContext().getAttribute("userBean"));
         String studentId;
         if (showMyCourses!=null){
@@ -44,6 +48,16 @@ public class UserPageServlet extends HttpServlet {
             req.getRequestDispatcher("userpage.jsp").forward(req, resp);
         } else if (showStudentCourses!=null) {
 
+        } else if (showAllCourses!=null) {
+            DisplayCoursesPackage.DisplayCourses(userBean);
+            req.setAttribute("showAllCourses",true);
+            req.setAttribute("showAllStudents",false);
+            req.getRequestDispatcher("userpage.jsp").forward(req, resp);
+        } else if (showAllStudents!=null) {
+            DisplayStudentsPacker.displaySudents(userBean);
+            req.setAttribute("showAllStudents",true);
+            req.setAttribute("showAllCourses",false);
+            req.getRequestDispatcher("userpage.jsp").forward(req, resp);
         }
 
     }

@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="GritAcademyPortal" options="-endorseddirs C:\Users\neil_\IdeaProjects\GitPortalen3.0\GitPortalen\target/endorsed" />
+      <module name="GritAcademyPortal" options="-endorseddirs C:\Users\Sam\Documents\GitHub\GitPortalen3.0\GitPortalen\target/endorsed" />
     </option>
   </component>
 </project>

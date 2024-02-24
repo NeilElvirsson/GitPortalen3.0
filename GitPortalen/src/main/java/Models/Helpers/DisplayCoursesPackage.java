@@ -20,11 +20,11 @@ public class DisplayCoursesPackage {
             ResultSet rs = CoursesModule.allCourses();
             courses.clear();
             while (rs.next()){
-
+                String courseId = rs.getString("id");
                 String courseName= rs.getString("course_name");
                 String YHP = rs.getString("YHP");
                 String description = rs.getString("description");
-                UserCourseConstructor course = new UserCourseConstructor(courseName, YHP,description);
+                UserCourseConstructor course = new UserCourseConstructor(courseId,courseName, YHP,description);
                 courses.add(course);
             }
 

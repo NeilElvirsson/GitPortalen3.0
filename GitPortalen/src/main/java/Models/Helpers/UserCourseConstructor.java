@@ -30,8 +30,8 @@ public class UserCourseConstructor {
         this.YHP = YHP;
         this.description = description;
     }
-    UserCourseConstructor(String courseName, String YHP, String description){
-
+    UserCourseConstructor(String id,String courseName, String YHP, String description){
+        this.id = id;
         this.courseName = courseName;
         this.YHP = YHP;
         this.description = description;

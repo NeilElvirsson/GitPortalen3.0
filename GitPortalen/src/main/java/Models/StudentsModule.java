@@ -18,6 +18,16 @@ public class StudentsModule {
             return null;
         }
     }
+    public static ResultSet students (){
+        String sql = "SELECT id,username,fname,lname,email,phone FROM students;";
+        try {
+            PreparedStatement ps = Database.connect().prepareStatement(sql);
+            return  ps.executeQuery();
+        }catch (SQLException ex){
+            Database.PrintSQLException(ex);
+            return null;
+        }
+    }
 
     public static ResultSet getStudent(){
         String sql = "";
