@@ -12,7 +12,7 @@
         <%@ include file="Fragments/adminNav.jsp" %>
     </c:if>
     <div class="text">
-        <h1>Your Courses</h1>
+        <h1>User Page</h1>
     </div>
 <c:if test="${requestScope['showMyCoursesBTClick']}">
     <%@ include file="Fragments/courseTable.jsp" %>
@@ -27,6 +27,14 @@
 
     <c:if test="${requestScope['showAllStudents']}">
         <%@ include file="Fragments/allStudents.jsp" %>
+    </c:if>
+
+    <c:if test="${requestScope['showStudentCourses']}">
+        <%@ include file="Fragments/studentCoursesTable.jsp" %>
+    </c:if>
+
+    <c:if test="${requestScope['showStudentsTeachers']}">
+        <%@ include file="Fragments/teachersStudentsTable.jsp" %>
     </c:if>
 
 <c:if test="${applicationScope.userBean.userType == 'teacher'}">

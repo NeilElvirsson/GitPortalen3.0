@@ -2,6 +2,7 @@ package Servlets;
 
 import Models.*;
 import Models.Helpers.DisplayCoursesPackage;
+import Models.Helpers.DisplayStudentsPacker;
 import Models.Helpers.UserCoursePackage;
 import Models.Helpers.UserStudentsPackage;
 
@@ -75,6 +76,7 @@ public class LogInServlet extends HttpServlet {
                     }else {
                         userBean.setPrivilegeType(String.valueOf(PrivilegeType.PRIVILAGE_TYPE.user));
                     }
+                    DisplayStudentsPacker.displaySudents(userBean);
                 }
                 getServletContext().setAttribute("userBean", userBean);
                 DisplayCoursesPackage.DisplayCourses(userBean);
